@@ -90,7 +90,7 @@ class AnswerController extends Controller
 
     public function getAnswersByQuiz($quiz_id)
     {
-        $error_code = 'ARGABQ00';
+        $error_code = 'ARGABQ200';
         $data = null;
         try {
             $answerTable = new Answer;

@@ -33,7 +33,7 @@ class QuizController extends Controller
                 $results = $getQuestions['results'];
                 $questions = [];
                 foreach ($results as $value) {
-                    $question['question'] = $value['question'];
+                    $question['question'] = html_entity_decode($value['question']);
                     $question['correct_answer'] = $value['correct_answer'] === "True";
                     $questions[] = $question;
                 }
